@@ -1,4 +1,6 @@
----- Sniper with increased damage but a chance to explode!
+--Name: Blowback
+--Author: Paz
+--Description: Sniper with increased damage but a chance to explode!
 
 
 
@@ -209,6 +211,8 @@ if SERVER then
 		local randint = math.random(1,3)
 		if (randint == 1) then
 		
+		--credit to maurits.tv for this next section (defining the explosion)
+
 		local explode = ents.Create( "env_explosion" ) -- creates the explosion
 		explode:SetPos( self.Owner:GetPos() )
 		-- this creates the explosion through your self.Owner:GetEyeTrace, which is why I put eyetrace in front
@@ -311,7 +315,7 @@ if CLIENT then
 
       type = "Weapon",
 
-      desc = "It's a musket!"
+      desc = "Careful now!"
 
    };
 
